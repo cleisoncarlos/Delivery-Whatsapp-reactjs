@@ -29,7 +29,8 @@ function App() {
 
 
 
-<div className="col-lg-8">
+<div className="mx-auto fixed-bottom">
+<div className="col-auto">
 <div class="btn-group my-3 w-100" role="group" aria-label="First group">
     <button type="button" class="btn btn-dark">
 <Hamburger size={32} weight="bold" /> 
@@ -50,6 +51,7 @@ function App() {
 
 </div>  
 
+</div>
 
 <div className="row mt-2">
 
