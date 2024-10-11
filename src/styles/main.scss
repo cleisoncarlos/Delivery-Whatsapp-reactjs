@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Vollkorn:ital,wght@0,400..900;1,400..900&display=swap');
+
+// Personalizar variáveis do Bootstrap
+//$primary: #ff6347;
+
+$background: #393f4d;
+$bg-cinza2: #505769;
+
+
+main {
+  background-image: url('https://picsum.photos/1920/600');
+  background-position: top;
+  background-repeat: no-repeat;
+  background-color: #000;
+}
+
+h1, h2,h3,h4,h5{
+    font-family: "Vollkorn", serif;
+    font-optical-sizing: auto; 
+    font-style: normal;
+    font-weight: 400;
+  }
+
+  p {
+    font-family: "Vollkorn", serif;
+  }
+
+ 
+  footer {
+    background-color: $background;
+  }
+
+
+// Importar os arquivos do Bootstrap
+@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/variables";
+@import "~bootstrap/scss/mixins";
+@import "~bootstrap/scss/bootstrap";
