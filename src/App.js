@@ -32,26 +32,26 @@ function App() {
 <div className="col-lg-8">
 <div class="btn-group my-3 w-100" role="group" aria-label="First group">
     <button type="button" class="btn btn-dark">
-<Hamburger size={32} weight="bold" /> Lanches
+<Hamburger size={32} weight="bold" /> 
     </button>
     <button type="button" class="btn btn-dark">
-<Pizza size={32} weight="fill" /> Pizzas
+<Pizza size={32} weight="fill" /> 
     </button>
     <button type="button" class="btn btn-dark">
-<BeerStein size={32} weight="fill" /> Bebidas alcoólicas
+<BeerStein size={32} weight="fill" /> 
     </button>
     <button type="button" class="btn btn-dark">
-<BeerBottle size={32} weight="fill" /> Refrigerantes e sucos
+<BeerBottle size={32} weight="fill" /> 
     </button>
     <button type="button" class="btn btn-dark">
-<IceCream size={32} weight="fill" /> Sorvetes
+<IceCream size={32} weight="fill" /> 
     </button>
   </div>
 
-</div> 
+</div>  
 
 
-<div className="row">
+<div className="row mt-2">
 
 {productsList.map((product) => (
     
@@ -60,16 +60,16 @@ function App() {
       <div className="card-body">
 <div className="row">
 <div className='col-lg-3 col-md-4'>
-<img src='https://picsum.photos/300/300' className="img-fluid" alt='...'/>
+<img src='https://picsum.photos/800/600' className="img-fluid" alt='...'/>
     </div>
 
-    <div className="col mt-2">
+    <div className="col">
    <h5 className="text-white"> {product.name}</h5>
     <p className="text-white small">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi quis molestie lectus. Praesent ut malesuada lectus.</p>
  
  <div className="d-flex justify-content-between">
  <h4 className="text-white">R$ {product.price}</h4>
-    <button className="btn btn-secondary btn-sm" onClick={() => addToCart(product)}><ShoppingCartSimple size={18}  weight="bold" /></button>
+    <button className="btn btn-secondary btn-sm" onClick={() => addToCart(product)}><ShoppingCartSimple size={18}  weight="bold" /> Adicionar</button>
 
   </div>
     </div>

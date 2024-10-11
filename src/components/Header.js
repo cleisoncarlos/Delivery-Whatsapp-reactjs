@@ -62,7 +62,7 @@ export default function Header() {
   return (
 <>
 <header>
-    <nav className="navbar bg-body-tertiary">
+    <nav className="navbar bg-body-tertiary fixed-top">
   <div className="container-fluid">
     <span className="navbar-brand">Navbar</span>
     <div className="d-flex" role="search">   
