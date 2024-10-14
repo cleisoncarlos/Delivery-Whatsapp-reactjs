@@ -1,10 +1,10 @@
 import CardHeader from "./components/CardHeader";
-import Footer from "./components/Footer";
 import Header from "./components/Header";
 
-import {ShoppingCartSimple, Hamburger, Pizza, BeerStein, BeerBottle, IceCream} from '@phosphor-icons/react'
+import {ShoppingCartSimple} from '@phosphor-icons/react'
 
 import { useStore } from './store/store';
+import Sidebar from "./components/Sidebar";
 
 const productsList = [
   { id: 1, name: 'Hamburger', price: 10 },
@@ -21,57 +21,40 @@ function App() {
 
   return (
 <>
+
+<div class="d-flex">
+
+  <Sidebar/>
+     
+
+  
+     <div class="w-100">
+    
+
 <Header/>
 <main>
-<div className="container pt-5">
+<div className="container-fluid mt-3">
 <CardHeader/>
 
-
-
-
-<div className="mx-auto fixed-bottom">
-<div className="col-auto">
-<div class="btn-group my-3 w-100" role="group" aria-label="First group">
-    <button type="button" class="btn btn-dark">
-<Hamburger size={32} weight="bold" /> 
-    </button>
-    <button type="button" class="btn btn-dark">
-<Pizza size={32} weight="fill" /> 
-    </button>
-    <button type="button" class="btn btn-dark">
-<BeerStein size={32} weight="fill" /> 
-    </button>
-    <button type="button" class="btn btn-dark">
-<BeerBottle size={32} weight="fill" /> 
-    </button>
-    <button type="button" class="btn btn-dark">
-<IceCream size={32} weight="fill" /> 
-    </button>
-  </div>
-
-</div>  
-
-</div>
-
-<div className="row mt-2">
+<div className="row">
 
 {productsList.map((product) => (
     
 <div className="col-lg-6 col-md-6 col-sm-6 mb-3"  key={product.id}>
-    <div className="card bg-dark shadow-sm border-0 rounded-0">
+    <div className="card shadow-sm border-0 rounded-0">
       <div className="card-body">
 <div className="row">
-<div className='col-lg-3 col-md-4'>
+<div className='col-lg-4 col-md-4'>
 <img src='https://picsum.photos/800/600' className="img-fluid" alt='...'/>
     </div>
 
     <div className="col">
-   <h5 className="text-white"> {product.name}</h5>
-    <p className="text-white small">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi quis molestie lectus. Praesent ut malesuada lectus.</p>
+   <h5 className="text-danger"> {product.name}</h5>
+    <p className="text-secondary small">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi quis molestie lectus. Praesent ut malesuada lectus.</p>
  
  <div className="d-flex justify-content-between">
- <h4 className="text-white">R$ {product.price}</h4>
-    <button className="btn btn-secondary btn-sm" onClick={() => addToCart(product)}><ShoppingCartSimple size={18}  weight="bold" /> Adicionar</button>
+ <h4 className="text-secondary">R$ {product.price}</h4>
+    <button className="btn btn-warning btn-sm" onClick={() => addToCart(product)}><ShoppingCartSimple size={18}  weight="bold" /> Adicionar</button>
 
   </div>
     </div>
@@ -82,31 +65,21 @@ function App() {
   </div>
 
         ))}
-
-        
-
-
-
-
 </div>
-
-
-
-
-
-
-
-
 </div>
 </main>
 
 
+     </div>
+ </div>
 
 
 
 
 
-<Footer/>
+
+
+
 
 
 

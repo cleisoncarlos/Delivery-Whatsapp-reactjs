@@ -7,28 +7,64 @@ $background: #393f4d;
 $bg-cinza2: #505769;
 
 
-main {
-  background-image: url('https://picsum.photos/1920/600');
-  background-position: top;
-  background-repeat: no-repeat;
-  background-color: #000;
+// main {
+//   background-image: url('https://picsum.photos/1920/600');
+//   background-position: top;
+//   background-repeat: no-repeat;
+//   background-color: #000;
+// }
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: "Vollkorn", serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-weight: 400;
 }
 
-h1, h2,h3,h4,h5{
-    font-family: "Vollkorn", serif;
-    font-optical-sizing: auto; 
-    font-style: normal;
-    font-weight: 400;
+p {
+  font-family: "Vollkorn", serif;
+}
+
+
+footer {
+  background-color: $background;
+}
+
+
+
+.sidebar {
+  height: 100vh;
+  transition: width 0.3s;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.sidebar.collapsed {
+  width: 80px;
+}
+
+.sidebar .nav-link span {
+  display: inline;
+}
+
+.sidebar.collapsed .nav-link span {
+  display: none;
+}
+
+@media (max-width: 767.98px) {
+  .sidebar {
+    width: 80px;
   }
 
-  p {
-    font-family: "Vollkorn", serif;
+  .sidebar .nav-link span {
+    display: none;
   }
-
- 
-  footer {
-    background-color: $background;
-  }
+}
 
 
 // Importar os arquivos do Bootstrap

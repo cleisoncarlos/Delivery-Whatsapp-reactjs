@@ -62,18 +62,16 @@ export default function Header() {
   return (
 <>
 <header>
-    <nav className="navbar bg-body-tertiary fixed-top">
+    <nav className="navbar bg-dark border-bottom border-body" data-bs-theme="dark">
   <div className="container-fluid">
     <span className="navbar-brand">Navbar</span>
     <div className="d-flex" role="search">   
 
-    <button class="btn btn-primary position-relative" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
+    <button class="btn btn-light position-relative" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
     <ShoppingCart size={24} weight='bold' />
-
 
     {  totalItems() <= 0 ? '' : <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">{totalItems()}</span> }
     
-
     </button>
 
     </div>
